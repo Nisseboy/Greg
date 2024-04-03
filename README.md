@@ -1,0 +1,1 @@
+A crafting calculator for gregtech CE, calculates the amount of machines or higher voltage machines needed for a specific task
