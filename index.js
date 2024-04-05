@@ -106,7 +106,7 @@ function redrawBoard() {
           previousMachine.productionNeeded[to.n] += input.amount / m.time / input.to.length * (m.amountNeeded || 1);
 
           let baseOutput = previousOutput.amount / previousMachine.time;
-          previousMachine.amountNeeded = previousMachine.productionNeeded / baseOutput;
+          previousMachine.amountNeeded = Math.max(previousMachine.productionNeeded / baseOutput, previousMachine.amountNeeded);
 
           let rfpt = previousMachine.rfpt;
           let needed = previousMachine.amountNeeded;
